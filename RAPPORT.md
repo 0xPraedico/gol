@@ -34,8 +34,6 @@ L’usage “historique” est **séquentiel** :
 - ajout de la génération suivante au fur et à mesure,
 - possibilité de “revenir dans le passé” puis de refaire un step → il faut **tronquer le futur**.
 
-Une **HashMap** n’apporte rien ici (pas de lookup aléatoire par clé utile) et ajoute un overhead inutile.
-
 #### Avantages du ring buffer (vs liste chaînée)
 - **O(1) strict** pour `back`, `forward`, `current`.
 - **push O(1) strict** côté conteneur : pas de `malloc`/`free` de nœuds à chaque step, pas de `realloc` de structure (capacité fixée).
